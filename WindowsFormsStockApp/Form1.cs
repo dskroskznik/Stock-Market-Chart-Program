@@ -48,9 +48,14 @@ namespace WindowsFormsStockApp
 
         }
 
-        private void label_Test_Click(object sender, EventArgs e)
+        private void button_SubmitStock_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_WebLink_MouseHover(object sender, EventArgs e)
+        {
+            helpProvider_Website.SetHelpString(button_WebLink, "Test");
         }
     }
 }
