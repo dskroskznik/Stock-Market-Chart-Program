@@ -2,9 +2,9 @@ C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\bin\Debug\WindowsFormsStockApp.exe
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\bin\Debug\WindowsFormsStockApp.pdb
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.csproj.AssemblyReference.cache
-C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.Form1.resources
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.Properties.Resources.resources
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.csproj.GenerateResource.cache
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.csproj.CoreCompileInputs.cache
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.exe
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.pdb
+C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.Form_StockEntry.resources
