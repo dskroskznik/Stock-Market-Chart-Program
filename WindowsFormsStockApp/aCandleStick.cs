@@ -6,30 +6,34 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsStockApp
 {
-    internal class aCandleStick
+    public class aCandleStick
     {
-        public Decimal open { get; private set; }
-        public Decimal close{ get; private set; }
-        public Decimal high{ get; private set; }
-        public Decimal low { get; private set; }
-        public long vol { get; private set; }
-        public DateTime datetime { get; private set; }
+        public String ticker { get; set; }
+        public String period { get; set; }
+        public DateTime datetime { get; set; }
+        public decimal open { get; set; }
+        public decimal high{ get; set; }
+        public decimal low { get; set; }
+        public decimal close { get; set; }
 
-        public aCandleStick(Decimal open, Decimal high, Decimal low, Decimal close, long vol, DateTime datetime)
+        public long volume { get; set; }
+
+
+        /*public aCandleStick(DateTime datetime, decimal open, decimal high, decimal low, decimal close, long volume)
         {
+            this.datetime = datetime;
             this.open = open;
-            this.close = close;
             this.high = high;
             this.low = low;
-            this.vol = vol;
-            this.datetime = datetime;
-        }
+            this.close = close;
+            this.volume = volume;
+        }*/
 
         public bool Bearish()
         {
             return close < open;
         }
-
+            
         public bool Bullish()
         {
             return close > open;
