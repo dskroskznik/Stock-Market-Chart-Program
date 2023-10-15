@@ -117,52 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip_HelpBox.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>428, 17</value>
-  </metadata>
-  <metadata name="toolTip_WebLink.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>258, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button_WebLink.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAIAAABvFaqvAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAAEnEAABJxAfPceo4AAANiSURBVDhPrZRZKG1hFMePF8Oj
-        vPEi5RiKB5FEmUlECsWLeCFTeEHKUBJ5MCVTmSIhRckQSqYiCpEkZB6TWRmu+3PWvuc457rdh3v/tb/W
-        t7//+u/1rWGrfvwPrK+v/0Xo/f1da2jt3/G9kDg8PDwMDw93dnZifHx81NTUjI2NXV5eCscA3wi9vb3h
-        WVdXl5eXV15eXl1dXVFRcX193d7enp+fn5ubi+L09DTSioMGhkJPT08nJye7u7uJiYl+fn4FBQVFRUVq
-        tXpvb6+7uxsVV1dXNzc3RAcHB29vbxW334V2dnZaWlq4zsjICJ+tqqoKCAjw8vI6PT318fEZGhqqra1N
-        SEjAMDc3Hx8fv7+/F0dDoZ6eHpUG3t7eMzMz8JaWloiFy87Ozp6dnfGmqalJOI6OjmjJHXVC7Ovr662t
-        rYXU1taWmZnp7u5uY2Pj6el5cHBARHZ2dmVlZY2NjcIxMTEhiYeHhxRHJ8Q3ya6RkZGQFhYWYmNjjY2N
-        sckRbFbskJCQrKwsFDWsz6BaW1tx1wlNTEyEh4fLMVhcXIyMjBQbiePjYxGytLSMiYkpLCyUI0A1uI0i
-        RGxUxMrKSjlUqUgWaRb7a0QgIiJibm5ObGAolJ6eDlUL6kVEYgcGBhJRUFCQbFNSUlZWVsQG1FFPiIqQ
-        URwEd3d3FxcXGMTCCuH8/Fy2NPfr6+vR0dEnT8PUE8rOznZwcFC+olZPTk7Sk2ITCyrBwcGyTU5OpifE
-        BoYR9ff3+/v7K/dWqegabe5h82VWbFNT09DQ0I6ODjkCejkCBExdlUOVanV1NSoqSuyvQs7OznFxcTSB
-        HNnb2zMJekKAILWFYzKjo6NdXFyoXUZGBkPLamtrm5SURAjCAbxcW1vDVyfE7ebn5+Pj44Xh5OREgMj1
-        9fVtb2+/vLxsbW3RIl1dXYyrhYUFHMaA/4y460VEhL29vSK0sbHBtrS01MzMjED29/flFo+Pj5ubm0wP
-        HArCPIivnhC4ublBAlAj2r+4uLiyspLsUGz+Ks3Nzbzx8PBITU2FwwDz8xJHQyEBsfBjQ8jX17ekpKSh
-        oeHq6mpqaiotLS0sLCwnJ2d5eVmh/sIfhWg8ppH+Hh0dpVefn595z8W5nWTXAN8LAXLPiqLAwJbTr/gU
-        4vl3DAwM/ARuqWdWLpb3ygAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button_WebLink.ToolTip" xml:space="preserve">
-    <value>The majority of stock market sample data used in
-this application has been reputable by the vast 
-amount of stock market analysis provided by
-the services of online trackers such as "YahooFinance.com".</value>
-  </data>
-  <metadata name="openFileDialog_OpenStock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>599, 17</value>
-  </metadata>
   <metadata name="aCandleStickBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="toolTip_StockChart.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>839, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>59</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAKAAAAEAIAAolAIAFgAAACgAAAAAAQAAQAEAAAEAIAAAAAAAAIACACMuAAAjLgAAAAAAAAAA

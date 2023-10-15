@@ -27,3 +27,4 @@ C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.exe.config
 C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.csproj.CopyComplete
+C:\Users\dskro\OneDrive\Desktop\SCHOOL\2023SU-FA\COP4365 Sfw System Development\Stock-Market-Project\WindowsFormsStockApp\obj\Debug\WindowsFormsStockApp.Form_StockChartDisplay.resources

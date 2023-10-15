@@ -49,6 +49,7 @@
             this.toolTip_HelpBox = new System.Windows.Forms.ToolTip(this.components);
             this.panel_Info = new System.Windows.Forms.Panel();
             this.groupBox_DateRange = new System.Windows.Forms.GroupBox();
+            this.checkBox_Volume = new System.Windows.Forms.CheckBox();
             this.groupBox_StockAndTime = new System.Windows.Forms.GroupBox();
             this.button_ClearFile = new System.Windows.Forms.Button();
             this.textBox_StockSelected = new System.Windows.Forms.TextBox();
@@ -57,15 +58,14 @@
             this.openFileDialog_OpenStock = new System.Windows.Forms.OpenFileDialog();
             this.dataGridView_StockData = new System.Windows.Forms.DataGridView();
             this.chart_StockData = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tickerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.linkLabel_Name = new System.Windows.Forms.LinkLabel();
+            this.toolTip_StockChart = new System.Windows.Forms.ToolTip(this.components);
+            this.aCandleStickBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.highDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lowDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.closeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCandleStickBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_Submit.SuspendLayout();
             this.panel_Info.SuspendLayout();
             this.groupBox_DateRange.SuspendLayout();
@@ -83,7 +83,7 @@
             this.comboBox_Stock.Name = "comboBox_Stock";
             this.comboBox_Stock.Size = new System.Drawing.Size(260, 24);
             this.comboBox_Stock.TabIndex = 0;
-            this.comboBox_Stock.DropDown += new System.EventHandler(this.comboBox_Stock_DropDown);
+            this.comboBox_Stock.SelectedIndexChanged += new System.EventHandler(this.comboBox_Stock_SelectedIndexChanged);
             // 
             // comboBox_TimeInt
             // 
@@ -97,6 +97,7 @@
             this.comboBox_TimeInt.Name = "comboBox_TimeInt";
             this.comboBox_TimeInt.Size = new System.Drawing.Size(260, 24);
             this.comboBox_TimeInt.TabIndex = 1;
+            this.comboBox_TimeInt.SelectedIndexChanged += new System.EventHandler(this.comboBox_TimeInt_SelectedIndexChanged);
             // 
             // label_Stock
             // 
@@ -119,7 +120,7 @@
             // label_StartDate
             // 
             this.label_StartDate.AutoSize = true;
-            this.label_StartDate.Location = new System.Drawing.Point(28, 26);
+            this.label_StartDate.Location = new System.Drawing.Point(28, 29);
             this.label_StartDate.Name = "label_StartDate";
             this.label_StartDate.Size = new System.Drawing.Size(107, 16);
             this.label_StartDate.TabIndex = 5;
@@ -127,7 +128,7 @@
             // 
             // dateTimePicker_EndDate
             // 
-            this.dateTimePicker_EndDate.Location = new System.Drawing.Point(18, 91);
+            this.dateTimePicker_EndDate.Location = new System.Drawing.Point(18, 94);
             this.dateTimePicker_EndDate.Name = "dateTimePicker_EndDate";
             this.dateTimePicker_EndDate.Size = new System.Drawing.Size(260, 22);
             this.dateTimePicker_EndDate.TabIndex = 6;
@@ -145,7 +146,7 @@
             // 
             // dateTimePicker_StartDate
             // 
-            this.dateTimePicker_StartDate.Location = new System.Drawing.Point(18, 45);
+            this.dateTimePicker_StartDate.Location = new System.Drawing.Point(18, 48);
             this.dateTimePicker_StartDate.Name = "dateTimePicker_StartDate";
             this.dateTimePicker_StartDate.Size = new System.Drawing.Size(260, 22);
             this.dateTimePicker_StartDate.TabIndex = 8;
@@ -153,7 +154,7 @@
             // label_EndDate
             // 
             this.label_EndDate.AutoSize = true;
-            this.label_EndDate.Location = new System.Drawing.Point(28, 72);
+            this.label_EndDate.Location = new System.Drawing.Point(28, 75);
             this.label_EndDate.Name = "label_EndDate";
             this.label_EndDate.Size = new System.Drawing.Size(104, 16);
             this.label_EndDate.TabIndex = 9;
@@ -162,7 +163,7 @@
             // panel_Submit
             // 
             this.panel_Submit.Controls.Add(this.button_SubmitStock);
-            this.panel_Submit.Location = new System.Drawing.Point(121, 448);
+            this.panel_Submit.Location = new System.Drawing.Point(121, 441);
             this.panel_Submit.Name = "panel_Submit";
             this.panel_Submit.Size = new System.Drawing.Size(175, 60);
             this.panel_Submit.TabIndex = 12;
@@ -181,7 +182,7 @@
             // 
             // button_WebLink
             // 
-            this.button_WebLink.Image = global::WindowsFormsStockApp.Properties.Resources.globe_10242;
+            this.button_WebLink.Image = ((System.Drawing.Image)(resources.GetObject("button_WebLink.Image")));
             this.button_WebLink.Location = new System.Drawing.Point(53, 4);
             this.button_WebLink.Name = "button_WebLink";
             this.button_WebLink.Size = new System.Drawing.Size(41, 40);
@@ -194,7 +195,7 @@
             // 
             this.panel_Info.Controls.Add(this.button_WebLink);
             this.panel_Info.Controls.Add(this.button_Help);
-            this.panel_Info.Location = new System.Drawing.Point(12, 448);
+            this.panel_Info.Location = new System.Drawing.Point(12, 441);
             this.panel_Info.Name = "panel_Info";
             this.panel_Info.Size = new System.Drawing.Size(103, 60);
             this.panel_Info.TabIndex = 15;
@@ -207,13 +208,25 @@
             this.groupBox_DateRange.Controls.Add(this.label_EndDate);
             this.groupBox_DateRange.Location = new System.Drawing.Point(12, 286);
             this.groupBox_DateRange.Name = "groupBox_DateRange";
-            this.groupBox_DateRange.Size = new System.Drawing.Size(284, 154);
+            this.groupBox_DateRange.Size = new System.Drawing.Size(299, 141);
             this.groupBox_DateRange.TabIndex = 16;
             this.groupBox_DateRange.TabStop = false;
             this.groupBox_DateRange.Text = "Manage Time Period";
             // 
+            // checkBox_Volume
+            // 
+            this.checkBox_Volume.AutoSize = true;
+            this.checkBox_Volume.Location = new System.Drawing.Point(33, 227);
+            this.checkBox_Volume.Name = "checkBox_Volume";
+            this.checkBox_Volume.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBox_Volume.Size = new System.Drawing.Size(213, 20);
+            this.checkBox_Volume.TabIndex = 21;
+            this.checkBox_Volume.Text = "Show Stock Display w/ Volume";
+            this.checkBox_Volume.UseVisualStyleBackColor = true;
+            // 
             // groupBox_StockAndTime
             // 
+            this.groupBox_StockAndTime.Controls.Add(this.checkBox_Volume);
             this.groupBox_StockAndTime.Controls.Add(this.button_ClearFile);
             this.groupBox_StockAndTime.Controls.Add(this.textBox_StockSelected);
             this.groupBox_StockAndTime.Controls.Add(this.label_OpenFile);
@@ -222,16 +235,16 @@
             this.groupBox_StockAndTime.Controls.Add(this.label_TimeInt);
             this.groupBox_StockAndTime.Controls.Add(this.label_Stock);
             this.groupBox_StockAndTime.Controls.Add(this.comboBox_TimeInt);
-            this.groupBox_StockAndTime.Location = new System.Drawing.Point(12, 27);
+            this.groupBox_StockAndTime.Location = new System.Drawing.Point(12, 21);
             this.groupBox_StockAndTime.Name = "groupBox_StockAndTime";
-            this.groupBox_StockAndTime.Size = new System.Drawing.Size(284, 244);
+            this.groupBox_StockAndTime.Size = new System.Drawing.Size(299, 257);
             this.groupBox_StockAndTime.TabIndex = 17;
             this.groupBox_StockAndTime.TabStop = false;
             this.groupBox_StockAndTime.Text = "Manage Stock And Time";
             // 
             // button_ClearFile
             // 
-            this.button_ClearFile.Location = new System.Drawing.Point(165, 195);
+            this.button_ClearFile.Location = new System.Drawing.Point(165, 192);
             this.button_ClearFile.Name = "button_ClearFile";
             this.button_ClearFile.Size = new System.Drawing.Size(113, 24);
             this.button_ClearFile.TabIndex = 8;
@@ -241,7 +254,7 @@
             // 
             // textBox_StockSelected
             // 
-            this.textBox_StockSelected.Location = new System.Drawing.Point(18, 196);
+            this.textBox_StockSelected.Location = new System.Drawing.Point(18, 193);
             this.textBox_StockSelected.Name = "textBox_StockSelected";
             this.textBox_StockSelected.Size = new System.Drawing.Size(141, 22);
             this.textBox_StockSelected.TabIndex = 7;
@@ -249,7 +262,7 @@
             // label_OpenFile
             // 
             this.label_OpenFile.AutoSize = true;
-            this.label_OpenFile.Location = new System.Drawing.Point(21, 135);
+            this.label_OpenFile.Location = new System.Drawing.Point(21, 133);
             this.label_OpenFile.Name = "label_OpenFile";
             this.label_OpenFile.Size = new System.Drawing.Size(150, 16);
             this.label_OpenFile.TabIndex = 6;
@@ -257,7 +270,7 @@
             // 
             // button_OpenFile
             // 
-            this.button_OpenFile.Location = new System.Drawing.Point(18, 155);
+            this.button_OpenFile.Location = new System.Drawing.Point(18, 153);
             this.button_OpenFile.Name = "button_OpenFile";
             this.button_OpenFile.Size = new System.Drawing.Size(260, 34);
             this.button_OpenFile.TabIndex = 5;
@@ -276,56 +289,73 @@
             this.dataGridView_StockData.AutoGenerateColumns = false;
             this.dataGridView_StockData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_StockData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tickerDataGridViewTextBoxColumn,
-            this.periodDataGridViewTextBoxColumn,
             this.datetimeDataGridViewTextBoxColumn,
             this.openDataGridViewTextBoxColumn,
             this.highDataGridViewTextBoxColumn,
             this.lowDataGridViewTextBoxColumn,
-            this.closeDataGridViewTextBoxColumn,
-            this.volumeDataGridViewTextBoxColumn});
+            this.closeDataGridViewTextBoxColumn});
             this.dataGridView_StockData.DataSource = this.aCandleStickBindingSource;
-            this.dataGridView_StockData.Location = new System.Drawing.Point(317, 358);
+            this.dataGridView_StockData.Location = new System.Drawing.Point(317, 401);
             this.dataGridView_StockData.Name = "dataGridView_StockData";
             this.dataGridView_StockData.RowHeadersWidth = 51;
             this.dataGridView_StockData.RowTemplate.Height = 24;
-            this.dataGridView_StockData.Size = new System.Drawing.Size(728, 150);
+            this.dataGridView_StockData.Size = new System.Drawing.Size(879, 155);
             this.dataGridView_StockData.TabIndex = 18;
             // 
             // chart_StockData
             // 
+            this.chart_StockData.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.AxisX.Title = "Dates";
+            chartArea1.AxisY.LabelStyle.Format = "0";
+            chartArea1.AxisY.Title = "Price(s)";
             chartArea1.Name = "ChartArea_Stock";
             this.chart_StockData.ChartAreas.Add(chartArea1);
+            this.chart_StockData.DataSource = this.aCandleStickBindingSource;
             legend1.Name = "Legend1";
             this.chart_StockData.Legends.Add(legend1);
             this.chart_StockData.Location = new System.Drawing.Point(317, 27);
             this.chart_StockData.Name = "chart_StockData";
-            this.chart_StockData.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            this.chart_StockData.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.ChartArea = "ChartArea_Stock";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Candlestick;
+            series1.CustomProperties = "PriceDownColor=Red, PriceUpColor=Green";
+            series1.IsXValueIndexed = true;
+            series1.LabelToolTip = "Open: #VALY3\\nHigh: #VALY2\\nLow: #VALY1\\nClose: #VALY4\\nDate: #VALX\\n";
             series1.Legend = "Legend1";
             series1.Name = "Ticker";
+            series1.ToolTip = "Open: #VALY3\\nHigh: #VALY2\\nLow: #VALY1\\nClose: #VALY4\\nDate: #VALX\\n";
+            series1.XValueMember = "datetime";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueMembers = "Low, High, Open, Close";
             series1.YValuesPerPoint = 4;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             this.chart_StockData.Series.Add(series1);
-            this.chart_StockData.Size = new System.Drawing.Size(728, 325);
+            this.chart_StockData.Size = new System.Drawing.Size(879, 368);
             this.chart_StockData.TabIndex = 19;
             this.chart_StockData.Text = "Stock Data";
+            this.chart_StockData.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chart_StockData_MouseMove);
             // 
-            // tickerDataGridViewTextBoxColumn
+            // linkLabel_Name
             // 
-            this.tickerDataGridViewTextBoxColumn.DataPropertyName = "ticker";
-            this.tickerDataGridViewTextBoxColumn.HeaderText = "ticker";
-            this.tickerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tickerDataGridViewTextBoxColumn.Name = "tickerDataGridViewTextBoxColumn";
-            this.tickerDataGridViewTextBoxColumn.Width = 125;
+            this.linkLabel_Name.AutoSize = true;
+            this.linkLabel_Name.Location = new System.Drawing.Point(9, 540);
+            this.linkLabel_Name.Name = "linkLabel_Name";
+            this.linkLabel_Name.Size = new System.Drawing.Size(226, 16);
+            this.linkLabel_Name.TabIndex = 20;
+            this.linkLabel_Name.TabStop = true;
+            this.linkLabel_Name.Text = "Stock Entry App by Dylan Skroskznik";
+            this.linkLabel_Name.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabel_Name.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Name_LinkClicked);
             // 
-            // periodDataGridViewTextBoxColumn
+            // toolTip_StockChart
             // 
-            this.periodDataGridViewTextBoxColumn.DataPropertyName = "period";
-            this.periodDataGridViewTextBoxColumn.HeaderText = "period";
-            this.periodDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.periodDataGridViewTextBoxColumn.Name = "periodDataGridViewTextBoxColumn";
-            this.periodDataGridViewTextBoxColumn.Width = 125;
+            this.toolTip_StockChart.UseAnimation = false;
+            this.toolTip_StockChart.UseFading = false;
+            // 
+            // aCandleStickBindingSource
+            // 
+            this.aCandleStickBindingSource.AllowNew = true;
+            this.aCandleStickBindingSource.DataSource = typeof(WindowsFormsStockApp.aCandleStick);
             // 
             // datetimeDataGridViewTextBoxColumn
             // 
@@ -367,24 +397,12 @@
             this.closeDataGridViewTextBoxColumn.Name = "closeDataGridViewTextBoxColumn";
             this.closeDataGridViewTextBoxColumn.Width = 125;
             // 
-            // volumeDataGridViewTextBoxColumn
-            // 
-            this.volumeDataGridViewTextBoxColumn.DataPropertyName = "volume";
-            this.volumeDataGridViewTextBoxColumn.HeaderText = "volume";
-            this.volumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.volumeDataGridViewTextBoxColumn.Name = "volumeDataGridViewTextBoxColumn";
-            this.volumeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // aCandleStickBindingSource
-            // 
-            this.aCandleStickBindingSource.AllowNew = false;
-            this.aCandleStickBindingSource.DataSource = typeof(WindowsFormsStockApp.aCandleStick);
-            // 
             // Form_StockEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 537);
+            this.ClientSize = new System.Drawing.Size(1208, 565);
+            this.Controls.Add(this.linkLabel_Name);
             this.Controls.Add(this.chart_StockData);
             this.Controls.Add(this.dataGridView_StockData);
             this.Controls.Add(this.groupBox_StockAndTime);
@@ -405,6 +423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart_StockData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCandleStickBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -435,14 +454,14 @@
         private System.Windows.Forms.DataGridView dataGridView_StockData;
         private System.Windows.Forms.BindingSource aCandleStickBindingSource;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_StockData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tickerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn periodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.LinkLabel linkLabel_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn openDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn highDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lowDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn closeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBox_Volume;
+        private System.Windows.Forms.ToolTip toolTip_StockChart;
     }
 }
 

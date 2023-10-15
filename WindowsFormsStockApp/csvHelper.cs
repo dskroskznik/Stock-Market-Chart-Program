@@ -26,7 +26,7 @@ namespace WindowsFormsStockApp
         public decimal close { get;  set; }
         public long volume { get; set; }
 
-        public readonly string fileDirectory;
+        //public readonly string fileDirectory;
  
     }
     internal class CSVfileClassMap : ClassMap<CSVfile>
@@ -63,8 +63,6 @@ namespace WindowsFormsStockApp
                     {
                         var candleStick = new aCandleStick
                         {
-                            ticker = rec.ticker,
-                            period = rec.period,
                             datetime = rec.datetime,
                             open = rec.open,
                             high = rec.high,
@@ -78,25 +76,13 @@ namespace WindowsFormsStockApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occurred: Empty Selection", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Occurred: Empty File Path Selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        /*public void RecordCandlestick(string filePath, DateTime sd, DateTime ed, List<> candlestickList)
+
+        public List<aCandleStick> FilterCSVList(List<aCandleStick> candleStickRange, DateTime startDate, DateTime endDate)
         {
-            using (var sr = new StreamReader(filePath))
-            using (var csv = new CsvReader(sr, new CsvConfiguration(CultureInfo.InvariantCulture)))
-            {
-                var records = csv.GetRecords<CSVfile>();
-                foreach(var filter in records)
-                {
-                    if(filter.datetime >= sd && filter.datetime <= ed)
-                    {
-                        candlestickList.Add(filter);
-                    }
-                }               
-            }
-        }*/
+            return candleStickRange.Where(candle => candle.datetime >= startDate && candle.datetime <= endDate).ToList();
+        }
     }
-         
-   
 }
