@@ -77,7 +77,7 @@
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Candlestick;
             series1.CustomProperties = "PriceDownColor=Red, PriceUpColor=Green";
             series1.IsXValueIndexed = true;
-            series1.LabelToolTip = "Open: #VALY3\\nHigh: VALY2\\n Low: VALY1\\n Close: VALY4\\n Date: VALX\\n";
+            series1.LabelToolTip = "Open: #VALY3\\nHigh: #VALY2\\nLow: #VALY1\\nClose: #VALY4\\nDate: #AXISLABEL";
             series1.Legend = "Legend1";
             series1.Name = "Ticker";
             series1.XValueMember = "DateTime";
@@ -86,6 +86,7 @@
             series1.YValuesPerPoint = 4;
             series2.ChartArea = "ChartArea_Volume";
             series2.IsXValueIndexed = true;
+            series2.LabelToolTip = "Volume: #VALY\\n Date: #VALX";
             series2.Legend = "Legend1";
             series2.Name = "Volume";
             series2.XValueMember = "DateTime";

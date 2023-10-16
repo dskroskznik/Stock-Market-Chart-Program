@@ -11,24 +11,27 @@ using System.Windows.Forms;
 using CsvHelper;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
+/*  COP4365 Software System Development - Project 1 */
+/*  Stock Entry App by Dylan Skroskznik */
 namespace WindowsFormsStockApp
 {
+    /* CSVfile represents the structure of csv stock data file */
     internal class CSVfile
     {
-        public String ticker { get; set; }
-        public String period {  get; set; }
-        public DateTime datetime { get; set; }
-        public decimal open { get; set; }
-        public decimal high { get; set; }
-        public decimal low { get; set; }
-        public decimal close { get;  set; }
-        public long volume { get; set; }
+        public String ticker { get; set; } /*   Stock ticker symbol */
+        public String period {  get; set; } /*  Time period */
+        public DateTime datetime { get; set; } /*   Date and time */
+        public decimal open { get; set; } /*    Opening price */                                      
+        public decimal high { get; set; } /*  Highest price   */
+        public decimal low { get; set; } /*  Lowest price  */
+        public decimal close { get;  set; } /*  Closing price   */
+        public long volume { get; set; } /*  Trading volume */
 
-        //public readonly string fileDirectory;
- 
     }
+    /* CSVfileClassMap defines a class map for to map these values in CSVfile to the specific CSV columns   */
     internal class CSVfileClassMap : ClassMap<CSVfile>
     {
         public CSVfileClassMap()
@@ -43,12 +46,14 @@ namespace WindowsFormsStockApp
             Map(m => m.volume).Name("Volume");
         }
     }
+    /*  CSVread defines a class that only records the csv data found and configues it to a list of candlestick objects   */
     public class CSVread
     {
         public void RecordCSVList(string filePath, List<aCandleStick> candleStickList)
         {
             try
             {
+                /* implement CSV configuration with settings like header presence   */
                 var configuration = new CsvConfiguration(CultureInfo.InvariantCulture)
                 {
                     HasHeaderRecord = true,
@@ -56,10 +61,12 @@ namespace WindowsFormsStockApp
                 using (var sr = new StreamReader(filePath))
                 using (var csv = new CsvReader(sr, configuration))
                 {
+                    /*  register CSVfileClassMap to map CSV columns to CSVfile properties */
                     csv.Context.RegisterClassMap<CSVfileClassMap>();
                     var record = csv.GetRecords<CSVfile>().ToList();
 
-                    foreach (var rec in record)
+                    /*  iterate through the CSV records and convert them to 'aCandleStick' objects    */
+                    foreach(var rec in record)
                     {
                         var candleStick = new aCandleStick
                         {
@@ -74,12 +81,12 @@ namespace WindowsFormsStockApp
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Error Occurred: Empty File Path Selected", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /* Function that filters a list of aCandleStick objects based on a date range. */
         public List<aCandleStick> FilterCSVList(List<aCandleStick> candleStickRange, DateTime startDate, DateTime endDate)
         {
             return candleStickRange.Where(candle => candle.datetime >= startDate && candle.datetime <= endDate).ToList();
