@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.DirectoryServices;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -167,7 +168,7 @@ namespace WindowsFormsStockApp
         }
         /*  Tooltip descriptor for the website button   */
         private void toolTip_WebLink_Popup(object sender, PopupEventArgs e)
-        {
+        { 
             toolTip_WebLink.SetToolTip(button_WebLink, "");
         }
         /*  Tooltip descriptor for the help button   */
@@ -389,13 +390,15 @@ namespace WindowsFormsStockApp
                 /*  loads stock data to datagridview    */
                 LoadDataCSV(filePathName, filteredCandleStickData);
                 /*  when show chart with volume checked: display charts with candlesticks and volume    */
-                if ((checkBox_Volume.Checked))
+                if (checkBox_Volume.Checked)
                 {
                     /*  checks for any existing or non-existing other chart forms open  */
+                    filePathName = LocateFileCSV(stockName, timeInterval);
                     if (stockChartDisplay == null || stockChartDisplay.IsDisposed)
                     {
                         /*  creates new form and calls candlestick charter to display both charts */
                         stockChartDisplay = new Form_StockChartDisplay();
+                        stockChartDisplay.Text = "Stock Display: " + Path.GetFileName(filePathName);
                         LoadCandlestickChartCSV(filePathName, filteredCandleStickData);
                         stockChartDisplay.LoadDisplayChartCSV(filePathName, filteredCandleStickData);
                         stockChartDisplay.Show();
@@ -404,6 +407,7 @@ namespace WindowsFormsStockApp
                     {
                         /*  creates new form and calls candlestick charter to display both charts */
                         stockChartDisplay = new Form_StockChartDisplay();
+                        stockChartDisplay.Text = "Stock Display: " + Path.GetFileName(filePathName);
                         LoadCandlestickChartCSV(filePathName, filteredCandleStickData);
                         stockChartDisplay.LoadDisplayChartCSV(filePathName, filteredCandleStickData);
                         stockChartDisplay.Show();
@@ -433,6 +437,7 @@ namespace WindowsFormsStockApp
                     {
                         /*  creates new form and calls candlestick charter to display both charts */
                         stockChartDisplay = new Form_StockChartDisplay();
+                        stockChartDisplay.Text = "Stock Display: " + Path.GetFileName(openFileDialog_OpenStock.FileName);
                         LoadCandlestickChartCSV(fileDialogName, filteredCandleStickData);
                         stockChartDisplay.LoadDisplayChartCSV(fileDialogName, filteredCandleStickData);
                         stockChartDisplay.Show();

@@ -75,6 +75,7 @@ namespace WindowsFormsStockApp
                 chart_StockDataAndVolume.DataManipulator.IsStartFromFirst = true;
                 */
                 /*  Reverses candlestick list in proper ascending order for charts   */
+                
                 candleStickList.Reverse();
                 candleStickList.Reverse();
                 /*  Grabs datasource from candlestick list object parameter passed in and binds  */

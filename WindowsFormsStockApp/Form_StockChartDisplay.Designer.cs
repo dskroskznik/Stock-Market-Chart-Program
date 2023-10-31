@@ -111,7 +111,6 @@
             this.Controls.Add(this.chart_StockDataAndVolume);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_StockChartDisplay";
-            this.Text = "Stock Chart Display";
             ((System.ComponentModel.ISupportInitialize)(this.chart_StockDataAndVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCandleStickBindingSource)).EndInit();
             this.ResumeLayout(false);

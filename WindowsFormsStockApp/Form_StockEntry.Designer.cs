@@ -274,13 +274,13 @@
             this.button_OpenFile.Name = "button_OpenFile";
             this.button_OpenFile.Size = new System.Drawing.Size(260, 34);
             this.button_OpenFile.TabIndex = 5;
-            this.button_OpenFile.Text = "Select Stock";
+            this.button_OpenFile.Text = "Select File";
             this.button_OpenFile.UseVisualStyleBackColor = true;
             this.button_OpenFile.Click += new System.EventHandler(this.button_OpenFile_Click);
             // 
             // openFileDialog_OpenStock
             // 
-            this.openFileDialog_OpenStock.Filter = "\"CSV Files (*.csv) | *.csv| All Files (*.*) | *.*\"";
+            this.openFileDialog_OpenStock.Filter = "Daily |*Day.csv|Weekly |*Week.csv|Monthly |*Month.csv|CSV Files |*.csv";
             this.openFileDialog_OpenStock.InitialDirectory = "../../../Stock Data";
             this.openFileDialog_OpenStock.Title = "\"Select CSV Stock File\"";
             // 
