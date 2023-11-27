@@ -28,25 +28,24 @@ Navigate through the Microsoft .NET documentation for resources and guidance on 
 
 ## Features
 1. **ComboBoxes for Candlestick Pattern Selection**
-   
-  a. Users can select different stock tickers available using ComboBoxes.
-  b. ComboBox dynamically update based on changes in users selection.
-3. **File Selection for Candlestick Data**
-  a. Users can choose individual CSV files directly containing stock data.
-  b. File selection allows for alternate use of analyzing the datasets.
-4. **Date Interval Selection**\n
-  a. Users can specify a date interval to focus the analysis on a specific time range.
-  b. This can be beneficial in examining wider trends and patterns within a defined period.
-5. **CSVHelper Class Integration**
-  a. The program uses CSVHelper for assists in parsing candlestick data from the selected file, which simplifies and improves structure.
-6. **Onboard Spreadsheet for Selected Stock Data**
-  a. Displays a dedicated table within the application to showcase selected stock data.
-  b. Users can interact with the table to explore specific details of the chosen dataset.
-7. **Stock Market Chart Display**
-  a. The window displays a visual representation of the stock market data using a candlestick chart.
-  b. Candlestick data plotted on the chart can be closely analyzed by mouse over of each candlestick to view more details.
-8. **User-Friendly Interface**
-  a. Access to helpful resources for more information or real-time activities on specific stocks are available on the form.
+   - Users can select different stock tickers available using ComboBoxes.
+   - ComboBox dynamically update based on changes in users selection.
+2. **File Selection for Candlestick Data**
+   - Users can choose individual CSV files directly containing stock data.
+   - File selection allows for alternate use of analyzing the datasets.
+3. **Date Interval Selection**
+   - Users can specify a date interval to focus the analysis on a specific time range.
+   - This can be beneficial in examining wider trends and patterns within a defined period.
+4. **CSVHelper Class Integration**
+   - The program uses CSVHelper for assists in parsing candlestick data from the selected file, which simplifies and improves structure.
+5. **Onboard Spreadsheet for Selected Stock Data**
+   - Displays a dedicated table within the application to showcase selected stock data.
+   - Users can interact with the table to explore specific details of the chosen dataset.
+6. **Stock Market Chart Display**
+   - The window displays a visual representation of the stock market data using a candlestick chart.
+   - Candlestick data plotted on the chart can be closely analyzed by mouse over of each candlestick to view more details.
+7. **User-Friendly Interface**
+   - Access to helpful resources for more information or real-time activities on specific stocks are available on the form.
 
 ## Screenshots 
 
