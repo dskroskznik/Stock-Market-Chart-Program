@@ -2,7 +2,7 @@
 Stock Market Technical Analysis Project in C# by: Dylan Skroskznik
 ---
 ## Overview
-This stock market program is all about analyzing stock market data over predetermined selections made by the user. The stock market is The stock market is a collection of exchanges through which equity shares of public companies are issued, bought and sold [1]. The role of the stock market is to provide a way for companies to raise capital by selling ownership shares to public investors. At the same time, the stock market allows private investors to buy shares of stock in public companies and become part owners of their businesses [1]. 
+This stock market program is all about analyzing stock market data over predetermined selections made by the user. The stock market is The stock market is a collection of exchanges through which equity shares of public companies are issued, bought and sold [1](#references). The role of the stock market is to provide a way for companies to raise capital by selling ownership shares to public investors. At the same time, the stock market allows private investors to buy shares of stock in public companies and become part owners of their businesses [1](#references). 
 The main objective for this program is to thoroughly, accessibly and informatively demonstrate and represent objected oriented program, user to data interaction and technical analysis.
 
 ## Contents
