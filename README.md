@@ -27,13 +27,13 @@ Navigate through the Microsoft .NET documentation for resources and guidance on 
   - [learn.microsoft.com/dotnet](https://learn.microsoft.com/en-us/dotnet/)
 
 ## Features
-1. **ComboBoxes for Candlestick Pattern Selection**
+1. **ComboBoxes for Candlestick Pattern Selection**\n
   a. Users can select different stock tickers available using ComboBoxes.
   b. ComboBox dynamically update based on changes in users selection.
-2. **File Selection for Candlestick Data**
+2. **File Selection for Candlestick Data**\n
   a. Users can choose individual CSV files directly containing stock data.
   b. File selection allows for alternate use of analyzing the datasets.
-3. **Date Interval Selection**
+3. **Date Interval Selection**\n
   a. Users can specify a date interval to focus the analysis on a specific time range.
   b. This can be beneficial in examining wider trends and patterns within a defined period.
 4. **CSVHelper Class Integration**
