@@ -23,7 +23,7 @@ The main objective for this program is to thoroughly, accessibly and informative
 4. **Build and Run**
 
 ## Documentation
-Navigate through the Microsoft .NET documentation for resources and guidance on Microsoft Visual Studio
+Navigate through the Microsoft .NET documentation for resources and guidance on Microsoft Visual Studio.
   - [learn.microsoft.com/dotnet](https://learn.microsoft.com/en-us/dotnet/)
 
 ## Features
@@ -48,7 +48,11 @@ Navigate through the Microsoft .NET documentation for resources and guidance on 
    - Access to helpful resources for more information or real-time activities on specific stocks are available on the form.
 
 ## Screenshots 
+### Main display of active stock file selected and submitted to form.
+![text](screenshots/Screenshot1.png)
 
+### Additional available window for comparison view of a candlestick chart and associative volumes.
+![text](screenshots/Screenshot2.png)
 
 ## References
 [1] Duggan, W. (2022, March 16). Investing Dictionary / Stock Market Definition. Retrieved from US News And World Report: https://money.usnews.com/investing/term/stock-market
