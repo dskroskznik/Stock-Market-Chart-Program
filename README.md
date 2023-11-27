@@ -27,24 +27,25 @@ Navigate through the Microsoft .NET documentation for resources and guidance on 
   - [learn.microsoft.com/dotnet](https://learn.microsoft.com/en-us/dotnet/)
 
 ## Features
-1. **ComboBoxes for Candlestick Pattern Selection**\n
+1. **ComboBoxes for Candlestick Pattern Selection**
+   
   a. Users can select different stock tickers available using ComboBoxes.
   b. ComboBox dynamically update based on changes in users selection.
-2. **File Selection for Candlestick Data**\n
+3. **File Selection for Candlestick Data**
   a. Users can choose individual CSV files directly containing stock data.
   b. File selection allows for alternate use of analyzing the datasets.
-3. **Date Interval Selection**\n
+4. **Date Interval Selection**\n
   a. Users can specify a date interval to focus the analysis on a specific time range.
   b. This can be beneficial in examining wider trends and patterns within a defined period.
-4. **CSVHelper Class Integration**
+5. **CSVHelper Class Integration**
   a. The program uses CSVHelper for assists in parsing candlestick data from the selected file, which simplifies and improves structure.
-5. **Onboard Spreadsheet for Selected Stock Data**
+6. **Onboard Spreadsheet for Selected Stock Data**
   a. Displays a dedicated table within the application to showcase selected stock data.
   b. Users can interact with the table to explore specific details of the chosen dataset.
-6. **Stock Market Chart Display**
+7. **Stock Market Chart Display**
   a. The window displays a visual representation of the stock market data using a candlestick chart.
   b. Candlestick data plotted on the chart can be closely analyzed by mouse over of each candlestick to view more details.
-7. **User-Friendly Interface**
+8. **User-Friendly Interface**
   a. Access to helpful resources for more information or real-time activities on specific stocks are available on the form.
 
 ## Screenshots 
