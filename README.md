@@ -16,7 +16,7 @@ The main objective of this program is to thoroughly, accessibly, and informative
 ## Installation
 1. **Clone repository to desired directory**
    ```bash
-   git clone https://github.com/dskroskznik/Stock-Market-Chart-Program.githttps://github.com/dskroskznik/Stock-Market-Chart-Program.git
+   git clone https://github.com/dskroskznik/Stock-Market-Chart-Program.git
 2. **Select and Open project solution file in Visual Studio**
    ```WindowsFormsStockApp.sln```
 3. **Restore required NuGet packages necessary for the project**
