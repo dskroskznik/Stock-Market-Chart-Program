@@ -1,4 +1,4 @@
-# Stock Market Project
+# Stock Market Project v.1.0
 Stock Market Technical Analysis Project in C# by: Dylan Skroskznik
 ---
 ## Overview
