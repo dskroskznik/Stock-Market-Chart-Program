@@ -6,7 +6,7 @@ This stock market program is all about analyzing stock market data (from a finit
 The main objective of this program is to thoroughly, accessibly, and informatively demonstrate and represent object-oriented programs, user-to-data interaction, and technical analysis.
 
 ## Contents
-- [Run From Source Code](#Run%20From%20Source%20Code)
+- [Run From Source Code](#run-from-source-code)
 - [Documentation](#documentation)
 - [Features](#features)
 - [Screenshots](#screenshots)
