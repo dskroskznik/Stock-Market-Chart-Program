@@ -6,14 +6,14 @@ This stock market program is all about analyzing stock market data (from a finit
 The main objective of this program is to thoroughly, accessibly, and informatively demonstrate and represent object-oriented programs, user-to-data interaction, and technical analysis.
 
 ## Contents
-- [Installation](#installation)
+- [Run From Source Code](#runfromsourcecode)
 - [Documentation](#documentation)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [References](#references)
 - [License](#license)
 
-## Installation
+## Run From Source Code
 1. **Clone repository to desired directory**
    ```bash
    git clone https://github.com/dskroskznik/Stock-Market-Chart-Program.git
