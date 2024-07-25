@@ -49,10 +49,10 @@ Navigate through the Microsoft .NET documentation for resources and guidance on 
 
 ## Screenshots 
 ### Main display of active stock file selected and submitted to the form.
-![text](screenshots/Screenshot1.png)
+![Screenshot1](https://github.com/user-attachments/assets/e7bc6152-a0d9-4d8a-8e49-c18b43009ab0)
 
 ### Additionally available window for a comparison view of a candlestick chart and associative volumes.
-![text](screenshots/Screenshot2.png)
+![Screenshot2](https://github.com/user-attachments/assets/e3afb688-0fc7-48b1-99f9-fb458f9cbbaf)
 
 ## References
 [1] Duggan, W. (2022, March 16). Investing Dictionary / Stock Market Definition. Retrieved from US News And World Report: https://money.usnews.com/investing/term/stock-market
